@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Cards from './components/Cards';
+// import Main from './components/Main';
+import NavBar from './components/NavBar';
+// import { connect } from 'react-redux'
+// import { useReducer } from 'react';
+// import reducer from './reducer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// const initialValue =0
+const App = () => {
+  return(
+  <>
+    <NavBar />
+    {/* <Main /> */}
+    <Cards />
+  </>
+  )
+
+// const[count , dispatch] = useReducer(reducer, initialValue)
+
+      {/* <button onClick={()=>dispatch({type :"INC"})}>+</button>
+      <p>{count}</p>
+    <button onClick={()=>dispatch({type :"DEC"})}>-</button> */}
+ 
 }
 
-export default App;
+export default App
