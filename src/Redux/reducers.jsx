@@ -5,10 +5,10 @@ import {ADD_TO_CART,Remove_TO_CART,Empty_CART} from "./constant"
 // data is initially empty
 
 const cartData =(data = [], action)=>{
-    // console.log("data is cart : ", action);
+    console.log("data is cart : ", action);
     switch(action.type){
         case ADD_TO_CART:
-        console.log("reducer add to cart", action)
+        console.log("reducer add to cart", action) 
         return([action.data, ...data])
 
         case Remove_TO_CART:

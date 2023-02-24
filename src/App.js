@@ -3,6 +3,8 @@ import './App.css';
 import Cards from './components/Cards';
 // import Main from './components/Main';
 import NavBar from './components/NavBar';
+import { Routes, Route } from 'react-router-dom'
+import CartItems from './components/CartItems';
 // import { connect } from 'react-redux'
 // import { useReducer } from 'react';
 // import reducer from './reducer';
@@ -13,8 +15,10 @@ const App = () => {
   return(
   <>
     <NavBar />
-    {/* <Main /> */}
-    <Cards />
+    <Routes>
+        <Route path="/" element={<Cards/>} /> 
+        <Route path="/cartitem" element={<CartItems />}/>
+      </Routes>
   </>
   )
 

@@ -1,32 +1,69 @@
-import React from 'react'
-import {useSelector} from 'react-redux'
-import Cards from './Cards'
+import React from "react";
 
 const NavBar = () => {
-    // getting the state lenght in the result
-    const  result = useSelector((state)=>state.cartData)
-    // calculating the price of each products
-    const totalPrice = result.reduce((total, item) => total + item.price, 0)
-
   return (
     <div>
-        <div className="container">
-        <h2>E-Commerce Cards </h2>
-            <ul className="nav">
-                <li className="list bg-black text-white p-4">
-                    {result.length}
-                </li>
-                <li className="li">
-                    <img src="./images/cart-icon.png" width={80} height={80} />
-                </li>
-                <li className="list bg-black text-white p-4">
-                    Price : {totalPrice}
-                </li>
-                <li>{result.length <=0 && <p className='bg-danger text-white p-4'>The Cart is Empty now </p>}</li>
+      <nav className="navbar navbar-expand-lg bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand text-light" href="#">
+            Mid Term Project
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active text-light" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-light" href="#">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-light" href="#">
+                  Cards
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-light" href="#">
+                  About
+                </a>
+              </li>
             </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success  text-light" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
+      </nav>
+      <br />
+      <br />
+      {/* NavBar Ends here */}
+      <div className="container">
+        <h2 className="align-center">E-Commerce Cards </h2><br />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

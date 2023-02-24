@@ -7,7 +7,7 @@ import CombReducers from "../Redux/rootReducers";
 // }
 
 const store = createStore(CombReducers
-    ,+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+    , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
  
 
 export default store;
